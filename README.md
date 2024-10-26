@@ -1,8 +1,8 @@
 # DoeMais
 
-`Aalise e desenvolvimento de sistemas`
+`Analise e desenvolvimento de sistemas`
 
-`DISCIPLINATrabalho Interdisciplinar: Aplicações para Processos de Negócios`
+`Trabalho Interdisciplinar: Aplicações para Processos de Negócios`
 
 `Segundo semestre`
 # Sobre o projeto: DoeMais
