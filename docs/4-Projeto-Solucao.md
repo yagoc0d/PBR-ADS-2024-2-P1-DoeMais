@@ -134,15 +134,41 @@ Este script deverá ser incluído em um arquivo .sql na pasta src\bd.
 
 ### 4.4. Tecnologias
 
-_Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas._
+No sistema Doe Mais, iremos utlizar as seguintes tecnologias:
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+- Backend 
+
+Java 17: Versão estável da linguagem de programação, java é uma linguagem amplamente utilizada no mercado com uma comunidade forte, o que torna aplicações em java fortemente recomendado. 
+
+Framework SpringBoot: É uma ferramenta muito utilizada em diversas áreas da programação que otimiza o trabalho dos desenvolvedores, fazendo com que ele seja focado no desenvolvimento do projeto e não nos processos de configuração e padronização. 
+
+Apache Maven: É uma ferramenta de gerenciamento e compreensão de projetos, com ela vamos poder gerenciar o build e as dependências da nossa aplicação. 
+
+ 
+
+- Frontend 
+
+Angular JS: Angular é um framework de código aberto desenvolvido pelo Google para a criação de aplicativos dinâmicos e interativos da web. Ele se baseia em TypeScript, uma linguagem superset do JavaScript. 
+
+ 
+
+- IDE 
+
+Intellij community: Uma IDE de desenvolvimento integrado escrito em Java para o desenvolvimento de software de computador escrito em Java, Kotlin, Groovy e outras linguagens baseadas em JVM 
+
+ 
+
+- Versionamento 
+
+Git: Sistema de controle de versão. 
+
+GitHub: Plataforma de hospedagem de código fonte que utiliza o git. 
 
 
 | **Dimensão**   | **Tecnologia**  |
 | ---            | ---             |
 | SGBD           | MySQL           |
-| Front end      | HTML+CSS+JS     |
+| Front end      | Angular JS      |
 | Back end       | Java SpringBoot |
 | Deploy         | Github Pages    |
 
