@@ -1,15 +1,12 @@
-### 3.3.2 Processo 2 – NOME DO PROCESSO
+### 3.3.2 Processo 2 – Cadastro de Parceiros 
 
-_Apresente aqui o nome e as oportunidades de melhoria para o processo 2. 
-Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN._
+![imagen do processo](https://github.com/user-attachments/assets/fd9722af-8700-4e86-869c-da6b32a9e354)
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](../images/process.png "Modelo BPMN do Processo 2.")
 
 
 #### Detalhamento das atividades
 
-_Descreva aqui cada uma das propriedades das atividades do processo 2. 
-Devem estar relacionadas com o modelo de processo apresentado anteriormente._
+
 
 _Os tipos de dados a serem utilizados são:_
 
@@ -19,49 +16,49 @@ _* **Caixa de texto** - campo texto de uma linha_
 
 _* **Número** - campo numérico_
 
-_* **Data** - campo do tipo data (dd-mm-aaaa)_
 
-_* **Hora** - campo do tipo hora (hh:mm:ss)_
-
-_* **Data e Hora** - campo do tipo data e hora (dd-mm-aaaa, hh:mm:ss)_
-
-_* **Imagem** - campo contendo uma imagem_
-
-_* **Seleção única** - campo com várias opções de valores que são mutuamente exclusivas (tradicional radio button ou combobox)_
-
-_* **Seleção múltipla** - campo com várias opções que podem ser selecionadas mutuamente (tradicional checkbox ou listbox)_
-
-_* **Arquivo** - campo de upload de documento_
-
-_* **Link** - campo que armazena uma URL_
-
-_* **Tabela** - campo formado por uma matriz de valores_
-
-**Nome da atividade 1**
+**Cadastro de parceiros**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
+| Nome completo   | Caixa de texto   |  Obrigatório   |                   |
 | ***Exemplo:***  |                  |                |                   |
-| login           | Caixa de Texto   | formato de e-mail |                |
-| senha           | Caixa de Texto   | mínimo de 8 caracteres |           |
+| Derick      | Caixa de Texto   | Até 100 caracteres |                |
+| ---             | ---              | ---            | ---               |
+| CNPJ | Numero |        Obrigatorio        |                   |
+| ***Exemplo:***  |                  |                |                   |
+| 12.345.678/9012-34” | Numero   | formato: “12.345.678/9012-34” |                |
+| ---             | ---              | ---            | ---               |
+| Email  | Campo de texto  |       Obrigatório         |                   |
+| ***Exemplo:***  |                  |                |                   |
+| fulano@gmail.com          | Caixa de Texto   | Formato “@dominio.com”|                |
+| ---             | ---              | ---            | ---               |
+| Endereço  | Área de texto |     Obrigatório           |                   |
+| ***Exemplo:***  |                  |                |                   |
+| cep           | Numero  |  Formato CEP “12345-678”  |                |
+| numero           | Numero  |Formato Número  “256” |           |
+| Tipo de estabelecimento | Campo de texto  | Obrigatório                |                   |
+| ***Exemplo:***  |                  |                |                   |
+| Restaurante          | Caixa de Texto   | Limite de 50 a 100 caracteres - Campo em branco invalido  |                |
+
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
+| Enviar Formulário  |Módulo de Cadastro de Estabelecimento  | Envio   ) |
 | ***Exemplo:***       |                                |                   |
-| entrar               | Fim do Processo 1              | default           |
-| cadastrar            | Início do proceso de cadastro  |                   |
-
-
-**Nome da atividade 2**
-
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
-|                 |                  |                |                   |
-
-| **Comandos**         |  **Destino**                   | **Tipo**          |
+| Ao clicar no botão "Enviar", os dados do formulário são enviados para o sistema, onde são processados e armazenados no banco de dados. Se o cadastro for bem-sucedido, uma mensagem de confirmação é exibida ao usuário.             |            |            |
 | ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
-|                      |                                |                   |
+|Rejeita cadastro   |Administração de Parceiros | Rejeição    ) |
+| ***Exemplo:***       |                                |                   |
+|     	Ao clicar no botão "Rejeitar", o cadastro do parceiro selecionado é marcado como rejeitado. O sistema notifica o usuário sobre a rejeição         |            |            |
+| ---                  | ---                            | ---               |
+|Aprovar Cadastro   |Administração de Parceiros   | Aprovação) |
+| ***Exemplo:***       |                                |                   |
+|    	  Ao clicar no botão "Aprovar", o cadastro do parceiro selecionado é validado e ativado no sistema.   |            |            |
+| ---                  | ---                            | ---               |
+| Solicitar Documentação Adicional   |Administração de Parceiros e Sistema de Notificação   | Envio   ) |
+| ***Exemplo:***       |                                |                   |
+|     Ao clicar no botão "Solicitar Documentação", uma notificação é enviada ao parceiro, solicitando documentos pendentes para completar seu cadastro.       |            |            |
+
+
+
