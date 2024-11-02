@@ -51,6 +51,13 @@ São protótipos usados em design de interface para sugerir a estrutura de um si
 > - [Axure](https://www.axure.com/edu) (Licença Educacional)
 > - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
 
+>-[Figma link ](https://www.figma.com/design/apm1VlPS6RPs38f7JvpCly/Untitled?node-id=0-1&node-type=canvas&t=iecLq8KYKFJaumLE-0)
+<img width="539" alt="image" src="https://github.com/user-attachments/assets/a09d1c8a-87da-4e18-b703-e6d7f30348cb">
+<img width="539" alt="image" src="https://github.com/user-attachments/assets/8d905a57-4d8c-48d7-a007-123b52c875ce">
+<img width="538" alt="image" src="https://github.com/user-attachments/assets/228b3939-e60e-4080-9018-3304253392e9">
+<img width="539" alt="image" src="https://github.com/user-attachments/assets/6b118d37-6868-40dc-bd11-f379788183e4">
+<img width="539" alt="image" src="https://github.com/user-attachments/assets/502fb33c-005c-4493-a032-f62e2f89c4f1">
+
 
 ## Diagrama de Classes
 
