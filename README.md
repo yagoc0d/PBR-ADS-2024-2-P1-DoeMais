@@ -1,23 +1,28 @@
-# TÍTULO DO PROJETO
+# DoeMais
 
-`CURSO`
+`Analise e desenvolvimento de sistemas`
 
-`DISCIPLINA`
+`Trabalho Interdisciplinar: Aplicações para Processos de Negócios`
 
-`SEMESTRE`
+`Segundo semestre`
+# Sobre o projeto: DoeMais
+Faremos um projeto visando auxiliar na resolução de um problema da [Agenda 2030](https://brasil.un.org/pt-br/sdgs) - 
+O problema da fome.
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Para isso, criaremos um sistema de doação que faz a gestão de doações alimentícias para necessitados. 
+O sistema conta com o auxílio de ONGs ou filantropos independentes.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+- Anderson Junior dos Santos
+- Danilo Henrique de Souza Riguette
+- Derick Eduardo dos Santos Orcelino
+- Matheus Henrique Bolina Diniz
+- Yago Marques Freitas de Oliveira
 
 ## Orientador
 
-* Nome completo do professor 1
+Cleia Marcia Gomes Amaral
 
 ## Instruções de utilização
 
