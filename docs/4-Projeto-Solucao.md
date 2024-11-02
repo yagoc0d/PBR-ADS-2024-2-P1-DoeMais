@@ -5,14 +5,32 @@
 ## 4.1. Arquitetura da solução
 
 
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
+4.1 Arquitetura da Solução
+O projeto "Doe Mais" foi desenvolvido para ajudar os usuários a localizar facilmente estabelecimentos e organizações que aceitam doações de alimentos. A solução é composta por módulos simples e eficientes para garantir a funcionalidade necessária sem adicionar complexidade excessiva.
 
- Inclua um diagrama da solução e descreva os módulos e as tecnologias
- que fazem parte da solução. Discorra sobre o diagrama.
- 
- **Exemplo do diagrama de Arquitetura**:
- 
- ![Exemplo de Arquitetura](./images/arquitetura-exemplo.png)
+Módulos da Solução
+
+Frontend:
+
+Descrição: Responsável pela interface do usuário. Permite que os usuários visualizem e busquem estabelecimentos próximos.
+Tecnologias: HTML, CSS e JavaScript com suporte de um framework leve, como Bootstrap, para design responsivo.
+
+Backend:
+
+Descrição: Lida com a lógica de negócios simples e gerencia a comunicação entre o frontend e o banco de dados.
+Tecnologias: Node.js com Express para uma API básica e fácil de implementar.
+
+Banco de Dados:
+
+Descrição: Armazena dados dos estabelecimentos, usuários e registros de doações.
+Tecnologias: SQLite ou um banco de dados leve, como o Firebase, para simplificar a configuração e o gerenciamento.
+
+Autenticação:
+
+Descrição: Garante que apenas usuários registrados possam acessar certas funcionalidades, como fazer uma doação.
+Tecnologias: JWT para uma autenticação simples baseada em tokens.
+
+
  
 
 ### 4.2. Protótipos de telas
@@ -32,6 +50,16 @@ São protótipos usados em design de interface para sugerir a estrutura de um si
 > - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
 > - [Axure](https://www.axure.com/edu) (Licença Educacional)
 > - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+
+>-[Figma link ](https://www.figma.com/design/apm1VlPS6RPs38f7JvpCly/Untitled?node-id=0-1&node-type=canvas&t=iecLq8KYKFJaumLE-0)
+<img width="539" alt="image" src="https://github.com/user-attachments/assets/a09d1c8a-87da-4e18-b703-e6d7f30348cb">
+<img width="539" alt="image" src="https://github.com/user-attachments/assets/8d905a57-4d8c-48d7-a007-123b52c875ce">
+<img width="538" alt="image" src="https://github.com/user-attachments/assets/228b3939-e60e-4080-9018-3304253392e9">
+<img width="539" alt="image" src="https://github.com/user-attachments/assets/6b118d37-6868-40dc-bd11-f379788183e4">
+<img width="539" alt="image" src="https://github.com/user-attachments/assets/502fb33c-005c-4493-a032-f62e2f89c4f1">
+
+
+
 
 
 ## Diagrama de Classes
@@ -134,15 +162,41 @@ Este script deverá ser incluído em um arquivo .sql na pasta src\bd.
 
 ### 4.4. Tecnologias
 
-_Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas._
+No sistema Doe Mais, iremos utlizar as seguintes tecnologias:
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+- Backend 
+
+Java 17: Versão estável da linguagem de programação, java é uma linguagem amplamente utilizada no mercado com uma comunidade forte, o que torna aplicações em java fortemente recomendado. 
+
+Framework SpringBoot: É uma ferramenta muito utilizada em diversas áreas da programação que otimiza o trabalho dos desenvolvedores, fazendo com que ele seja focado no desenvolvimento do projeto e não nos processos de configuração e padronização. 
+
+Apache Maven: É uma ferramenta de gerenciamento e compreensão de projetos, com ela vamos poder gerenciar o build e as dependências da nossa aplicação. 
+
+ 
+
+- Frontend 
+
+Angular JS: Angular é um framework de código aberto desenvolvido pelo Google para a criação de aplicativos dinâmicos e interativos da web. Ele se baseia em TypeScript, uma linguagem superset do JavaScript. 
+
+ 
+
+- IDE 
+
+Intellij community: Uma IDE de desenvolvimento integrado escrito em Java para o desenvolvimento de software de computador escrito em Java, Kotlin, Groovy e outras linguagens baseadas em JVM 
+
+ 
+
+- Versionamento 
+
+Git: Sistema de controle de versão. 
+
+GitHub: Plataforma de hospedagem de código fonte que utiliza o git. 
 
 
 | **Dimensão**   | **Tecnologia**  |
 | ---            | ---             |
 | SGBD           | MySQL           |
-| Front end      | HTML+CSS+JS     |
+| Front end      | Angular JS      |
 | Back end       | Java SpringBoot |
 | Deploy         | Github Pages    |
 
