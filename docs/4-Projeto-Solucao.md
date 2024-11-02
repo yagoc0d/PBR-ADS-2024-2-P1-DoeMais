@@ -5,14 +5,35 @@
 ## 4.1. Arquitetura da solução
 
 
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
+4.1 Arquitetura da Solução
+O projeto "Doe Mais" foi desenvolvido para ajudar os usuários a localizar facilmente estabelecimentos e organizações que aceitam doações de alimentos. A solução é composta por módulos simples e eficientes para garantir a funcionalidade necessária sem adicionar complexidade excessiva.
 
- Inclua um diagrama da solução e descreva os módulos e as tecnologias
- que fazem parte da solução. Discorra sobre o diagrama.
- 
- **Exemplo do diagrama de Arquitetura**:
- 
- ![Exemplo de Arquitetura](./images/arquitetura-exemplo.png)
+Módulos da Solução
+
+Frontend:
+
+Descrição: Responsável pela interface do usuário. Permite que os usuários visualizem e busquem estabelecimentos próximos.
+Tecnologias: HTML, CSS e JavaScript com suporte de um framework leve, como Bootstrap, para design responsivo.
+
+Backend:
+
+Descrição: Lida com a lógica de negócios simples e gerencia a comunicação entre o frontend e o banco de dados.
+Tecnologias: Node.js com Express para uma API básica e fácil de implementar.
+
+Banco de Dados:
+
+Descrição: Armazena dados dos estabelecimentos, usuários e registros de doações.
+Tecnologias: SQLite ou um banco de dados leve, como o Firebase, para simplificar a configuração e o gerenciamento.
+
+Autenticação:
+
+Descrição: Garante que apenas usuários registrados possam acessar certas funcionalidades, como fazer uma doação.
+Tecnologias: JWT para uma autenticação simples baseada em tokens.
+
+Geolocalização:
+
+Descrição: Fornece uma funcionalidade básica de busca de estabelecimentos próximos ao usuário.
+Tecnologias: API gratuita do OpenStreetMap ou a API de geolocalização do navegador.
  
 
 ### 4.2. Protótipos de telas
