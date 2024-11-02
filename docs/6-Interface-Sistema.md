@@ -34,3 +34,7 @@ _Descrição da tela relativa à atividade 2._
 [`Tela da atividade 2`](images/)
 
 
+#### 4.3.3 Modelo Físico
+
+Insira aqui o script de criação das tabelas do banco de dados.
+[Arquivo SQL](/src/db/CriacaoVazio.sql)
