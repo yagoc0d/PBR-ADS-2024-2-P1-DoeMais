@@ -5,12 +5,26 @@
 > - [Modelagem de Processos AS-IS x TO-BE](https://dheka.com.br/modelagem-as-is-to-be/)
 > - [20 Dicas Práticas de Modelagem de Processos](https://dheka.com.br/20-dicas-praticas-de-modelagem-de-processos/)
 
-### 3.1. Modelagem da situação atual (Modelagem AS IS)
+### 3.1 Modelagem da Situação Atual (Modelagem AS IS)
+Descrição Textual do Processo Atual
+Atualmente, o processo de coleta e análise de feedback em plataformas de doações de alimentos, como o projeto "Doe Mais", pode ser realizado de maneira fragmentada e manual, com várias etapas que envolvem múltiplas interações e revisões por parte de usuários e equipes responsáveis. O processo descrito no diagrama AS-IS é detalhado a seguir:
 
-_Apresente uma descrição textual de como os sistemas atuais resolvem o problema que se propõe a resolver.  Caso sua proposta seja inovadora e não existam processos claramente definidos, **apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente**, mesmo que não se utilize tecnologia computacional._
+Processo AS-IS de Coleta de Feedback:
 
-Com o tema do projeto definido, escolham alguns processos neste contexto de negócios. Para ilustrar potenciais ganhos com a automatização, imaginem processos manuais, ineficientes e/ou com muitas idas e vindas, gerando, assim, retrabalho.
-Colem aqui os modelos dos processos atuais (modelo AS-IS), elaborados com o apoio da ferramenta baseada em BPMN utilizada na disciplina.
+Solicitação de Feedback pelo Sistema: O sistema inicia o processo enviando uma solicitação de feedback ao usuário.
+Preenchimento do Feedback pelo Usuário: O usuário recebe a solicitação e preenche o formulário de feedback com suas impressões e informações relevantes.
+
+Envio do Feedback: O usuário envia o feedback preenchido de volta para o sistema.
+Validação pelo Sistema: O sistema verifica se o feedback foi preenchido corretamente. Se não for preenchido, o processo é encerrado sem conclusão.
+Armazenamento do Feedback: Se o feedback estiver completo, as informações são armazenadas em uma base de dados e enviadas para a equipe responsável.
+Análise pela Equipe: A equipe responsável recebe os resultados do feedback e realiza uma análise detalhada.
+Discussão e Definição de Melhorias: Com base na análise, a equipe discute os resultados e define as melhorias necessárias para aprimorar o processo de doação.
+Dependência Manual: O processo de preenchimento e envio de feedback depende da ação manual dos usuários.
+Verificação Limitada: A validação de preenchimento é simples e pode não verificar a qualidade ou completude das respostas.
+Processo Lento de Análise: A análise dos resultados pela equipe responsável pode ser demorada, levando a um atraso na implementação de melhorias.
+
+![image](https://github.com/user-attachments/assets/6f83d062-838f-4878-9a21-e99756bc716e)
+
 
 ### 3.2 Descrição Geral da Proposta (Modelagem TO BE)
 A proposta da solução "Doe Mais" inclui a criação de um sistema unificado e simplificado para cadastro e login, melhorando a experiência do usuário e otimizando os processos para reduzir erros e retrabalho.
