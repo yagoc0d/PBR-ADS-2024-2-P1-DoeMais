@@ -30,10 +30,7 @@ Autenticação:
 Descrição: Garante que apenas usuários registrados possam acessar certas funcionalidades, como fazer uma doação.
 Tecnologias: JWT para uma autenticação simples baseada em tokens.
 
-Geolocalização:
 
-Descrição: Fornece uma funcionalidade básica de busca de estabelecimentos próximos ao usuário.
-Tecnologias: API gratuita do OpenStreetMap ou a API de geolocalização do navegador.
  
 
 ### 4.2. Protótipos de telas
