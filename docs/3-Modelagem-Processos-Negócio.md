@@ -12,13 +12,27 @@ _Apresente uma descrição textual de como os sistemas atuais resolvem o problem
 Com o tema do projeto definido, escolham alguns processos neste contexto de negócios. Para ilustrar potenciais ganhos com a automatização, imaginem processos manuais, ineficientes e/ou com muitas idas e vindas, gerando, assim, retrabalho.
 Colem aqui os modelos dos processos atuais (modelo AS-IS), elaborados com o apoio da ferramenta baseada em BPMN utilizada na disciplina.
 
-### 3.2. Descrição geral da proposta (Modelagem TO BE)
+### 3.2 Descrição Geral da Proposta (Modelagem TO BE)
+A proposta da solução "Doe Mais" inclui a criação de um sistema unificado e simplificado para cadastro e login, melhorando a experiência do usuário e otimizando os processos para reduzir erros e retrabalho.
 
-Tendo identificado os gargalos dos modelos AS IS, apresentem uma descrição da proposta de solução, buscando maior eficiência com a introdução da tecnologia. Abordem também os limites dessa solução e o seu alinhamento com as estratégias e objetivos do contexto de negócio escolhido. 
-Colem aqui os modelos da solução proposta (modelo TO BE) elaborados com o apoio da ferramenta baseada em BPMN utilizada na disciplina.
-Cada processo identificado deve ter seu modelo TO-BE específico. Descrevam as oportunidades de melhoria de cada processo da solução proposta.
+Processo de Cadastro de Usuários (Proposta TO BE):
+Acesso Simplificado: O usuário acessa a plataforma e realiza o cadastro de forma intuitiva, com verificação automática das informações.
+Validação Automatizada: O backend valida as informações em tempo real e fornece feedback imediato sobre eventuais erros ou sucessos.
+Registro Eficiente: Se as informações estiverem corretas, os dados são salvos automaticamente no banco de dados, confirmando o sucesso do cadastro com uma notificação clara ao usuário.
 
-_Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias._
+Processo de Login (Proposta TO BE):
+Autenticação Otimizada: O processo de login utiliza autenticação segura e fornece respostas claras em caso de falha, sugerindo soluções para erros comuns.
+Acesso Rápido: Credenciais válidas direcionam o usuário à página inicial com maior eficiência, otimizando o tempo de navegação.
+Limites da Solução:
+Dependência de conexão à internet: A solução depende de acesso estável à internet para realizar a verificação de dados em tempo real.
+Atualização de Informações: A eficácia da experiência depende da manutenção e atualização das informações no banco de dados.
+Oportunidades de Melhoria:
+Automatização e Redução de Erros: A validação automatizada diminui o retrabalho e aumenta a precisão dos dados.
+Feedback Imediato: Respostas em tempo real melhoram a experiência do usuário e ajudam a resolver problemas de login e cadastro rapidamente.
+
+![image](https://github.com/user-attachments/assets/ab1132cb-4d6d-4393-9893-8f69a5ff5cc2)
+
+
 
 ### 3.3. Modelagem dos processos
 
