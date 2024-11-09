@@ -16,6 +16,45 @@ CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
 USE `mydb` ;
 
 -- -----------------------------------------------------
+-- Table `mydb`.`parceiro`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`parceiro` ;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`parceiro` (
+  `idParceiro` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(100) NOT NULL,
+  `cnpj` VARCHAR(18) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `senha` VARCHAR(200) NULL,
+  `tipo` VARCHAR(45) NULL,
+  `endereco` VARCHAR(100) NULL,
+  `razaoSocial` VARCHAR(45) NULL,
+  `ativo` TINYINT NULL DEFAULT 0,
+  PRIMARY KEY (`idParceiro`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`sacola`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`sacola` ;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`sacola` (
+  `idSacolaDoacao` INT NOT NULL AUTO_INCREMENT,
+  `descricao` VARCHAR(400) NULL,
+  `nome` VARCHAR(50) NULL,
+  `parceiro_idParceiro` INT NOT NULL,
+  PRIMARY KEY (`idSacolaDoacao`),
+  INDEX `fk_sacolaDoacao_parceiro1_idx` (`parceiro_idParceiro` ASC) VISIBLE,
+  CONSTRAINT `fk_sacolaDoacao_parceiro1`
+    FOREIGN KEY (`parceiro_idParceiro`)
+    REFERENCES `mydb`.`parceiro` (`idParceiro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `mydb`.`usuario`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`usuario` ;
@@ -32,20 +71,23 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`parceiro`
+-- Table `mydb`.`solicitacaoCadastro`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`parceiro` ;
+DROP TABLE IF EXISTS `mydb`.`solicitacaoCadastro` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`parceiro` (
-  `idParceiro` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(100) NOT NULL,
-  `cnpj` VARCHAR(18) NOT NULL,
-  `email` VARCHAR(100) NOT NULL,
-  `senha` VARCHAR(200) NULL,
-  `tipo` VARCHAR(45) NULL,
-  `endereco` VARCHAR(100) NULL,
-  `razaoSocial` VARCHAR(45) NULL,
-  PRIMARY KEY (`idParceiro`))
+CREATE TABLE IF NOT EXISTS `mydb`.`solicitacaoCadastro` (
+  `idsolicitacaoCadastro` INT NOT NULL AUTO_INCREMENT,
+  `revisaoAprovada` TINYINT NULL DEFAULT 0,
+  `dataSolicitacao` DATE NULL,
+  `dataAprovacao` DATE NULL,
+  `parceiro_idParceiro` INT NULL,
+  PRIMARY KEY (`idsolicitacaoCadastro`),
+  INDEX `fk_solicitacaoCadastro_parceiro_idx` (`parceiro_idParceiro` ASC) VISIBLE,
+  CONSTRAINT `fk_solicitacaoCadastro_parceiro`
+    FOREIGN KEY (`parceiro_idParceiro`)
+    REFERENCES `mydb`.`parceiro` (`idParceiro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -78,47 +120,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`sacolaDoacao`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`sacolaDoacao` ;
-
-CREATE TABLE IF NOT EXISTS `mydb`.`sacolaDoacao` (
-  `idSacolaDoacao` INT NOT NULL AUTO_INCREMENT,
-  `descricao` VARCHAR(400) NULL,
-  `nome` VARCHAR(20) NULL,
-  `pedidoDoacao_idPedidoDoacao` INT NULL,
-  PRIMARY KEY (`idSacolaDoacao`),
-  INDEX `fk_sacolaDoacao_pedidoDoacao1_idx` (`pedidoDoacao_idPedidoDoacao` ASC) VISIBLE,
-  CONSTRAINT `fk_sacolaDoacao_pedidoDoacao1`
-    FOREIGN KEY (`pedidoDoacao_idPedidoDoacao`)
-    REFERENCES `mydb`.`pedidoDoacao` (`idPedidoDoacao`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`solicitacaoCadastro`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`solicitacaoCadastro` ;
-
-CREATE TABLE IF NOT EXISTS `mydb`.`solicitacaoCadastro` (
-  `idsolicitacaoCadastro` INT NOT NULL AUTO_INCREMENT,
-  `revisaoAprovada` TINYINT NULL DEFAULT 0,
-  `dataSolicitacao` DATE NULL,
-  `dataAprovacao` DATE NULL,
-  `parceiro_idParceiro` INT NULL,
-  PRIMARY KEY (`idsolicitacaoCadastro`),
-  INDEX `fk_solicitacaoCadastro_parceiro_idx` (`parceiro_idParceiro` ASC) VISIBLE,
-  CONSTRAINT `fk_solicitacaoCadastro_parceiro`
-    FOREIGN KEY (`parceiro_idParceiro`)
-    REFERENCES `mydb`.`parceiro` (`idParceiro`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `mydb`.`feedback`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`feedback` ;
@@ -140,6 +141,30 @@ CREATE TABLE IF NOT EXISTS `mydb`.`feedback` (
   CONSTRAINT `fk_feedback_usuario1`
     FOREIGN KEY (`usuario_idusuario`)
     REFERENCES `mydb`.`usuario` (`idusuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`sacolaPedido`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`sacolaPedido` ;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`sacolaPedido` (
+  `pedidoDoacao_idPedidoDoacao` INT NOT NULL,
+  `sacolaDoacao_idSacolaDoacao` INT NOT NULL,
+  PRIMARY KEY (`pedidoDoacao_idPedidoDoacao`, `sacolaDoacao_idSacolaDoacao`),
+  INDEX `fk_sacolaDoacao_pedidoDoacao1_idx` (`pedidoDoacao_idPedidoDoacao` ASC) VISIBLE,
+  INDEX `fk_sacolaPedido_sacolaDoacao1_idx` (`sacolaDoacao_idSacolaDoacao` ASC) VISIBLE,
+  CONSTRAINT `fk_sacolaDoacao_pedidoDoacao10`
+    FOREIGN KEY (`pedidoDoacao_idPedidoDoacao`)
+    REFERENCES `mydb`.`pedidoDoacao` (`idPedidoDoacao`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_sacolaPedido_sacolaDoacao1`
+    FOREIGN KEY (`sacolaDoacao_idSacolaDoacao`)
+    REFERENCES `mydb`.`sacola` (`idSacolaDoacao`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
